@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>swarm_belief_updater_process</name>
+  <version>0.0.0</version>
+  <description>The swarm_belief_updater_process package</description>
+
+  <author email="gdefermin@gmail.com">Guillermo De Fermin</author>
+  <maintainer email="cabrera.javier23@gmail.com">Javier Cabrera Marugan</maintainer>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>droneMsgsROS</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>yaml-cpp</build_depend>
+  <build_depend>aerostack_msgs</build_depend>
+  <build_depend>droneMsgsROS</build_depend>
+  <build_depend>belief_manager_msgs</build_depend>
+
+  <run_depend>droneMsgsROS</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>yaml-cpp</run_depend>
+  <run_depend>aerostack_msgs</run_depend>
+  <run_depend>droneMsgsROS</run_depend>
+  <run_depend>belief_manager_msgs</run_depend>
+</package>

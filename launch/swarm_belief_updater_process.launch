@@ -1,0 +1,34 @@
+<launch>
+  <arg name="drone_id_namespace" default="drone1" />
+  <arg name="drone_id_int" default="1" />
+  <arg name="my_stack_directory" default="$(env AEROSTACK_STACK)" />
+  <arg name="pose_topic" default="self_localization/pose" />
+  <arg name="battery_topic" default="sensor_measurement/battery_state" />
+  <arg name="message_from_robot"  default="message_from_robot" />
+    <arg name="shared_robot_positions_channel"     default="shared_robot_positions_channel" />
+  <group ns="$(arg drone_id_namespace)">
+    <node name="swarm_belief_updater_process"
+          pkg="swarm_belief_updater_process"
+          type="swarm_belief_updater_process_main"
+          output="screen">
+      <param name="~drone_id"
+             value="$(arg drone_id_int)"
+             type="string" />
+      <param name="~pose_topic"
+             value="$(arg pose_topic)"
+             type="string" />
+      <param name="~battery_topic"
+             value="$(arg battery_topic)"
+             type="string" />
+      <param name="~message_from_robot"     
+             value="$(arg message_from_robot)"    
+             type="str" />
+      <param name="~drone_id_namespace"     
+             value="$(arg drone_id_namespace)"    
+             type="str" />
+      <param name="~shared_robot_positions_channel"      
+	     value="$(arg shared_robot_positions_channel)"     
+             type="str" />
+    </node>
+  </group>
+</launch>
